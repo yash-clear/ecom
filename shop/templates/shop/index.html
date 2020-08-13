@@ -84,7 +84,7 @@ padding-right: 0;
                 {% if i.discount == 0 %}
                 <h6 style="display:inline-block">Rs. </h6><h6 id="pricepr{{i.id}}"  style="display:inline-block">{{i.price}}</h6><h6 style="display:inline-block">/-</h6><br>
                 {% else %}
-                <h6 style="display:inline-block">Rs. </h6><h6 id="pricepr{{i.id}}"  style="display:inline-block; text-decoration: overline; ">{{i.price}}</h6><h6 style="display:inline-block">/-</h6><br>
+                <h6 style="display:inline">Rs. </h6><h6 style="display: inline;">{{i.subt}}/- </h6><h6 id="pricepr{{i.id}}"  style="display:inline; text-decoration: line-through;color: gray; ">{{i.price}}</h6><h6 style="display:inline; text-decoration: line-through;color: gray;" >/-</h6><br>
                 {% endif %}
                 <span id="divpr{{i.id}}" class="divpr">
                   <button id="pr{{i.id}}" class="btn btn-primary cart" style="background-color: black;">Add To Cart</button></span>

@@ -1,5 +1,7 @@
 from django.db import models
+from django import template
 
+register = template.Library()
 # Create your models here.
 class Product(models.Model):
     product_id = models.AutoField
@@ -15,8 +17,12 @@ class Product(models.Model):
     discount=models.IntegerField(default=0)
     return_policy=models.CharField(max_length=200,default="No return No exchange")
 
+    def subt(self):
+        newval = self.price - self.discount*0.01*self.price
+        return newval 
     def __str__(self):
         return self.product_name
+       
 
 
 class Contact(models.Model):
