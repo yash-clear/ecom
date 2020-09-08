@@ -26,8 +26,8 @@ bottom: 0;
 }
 .card{
 float:left;
-height:25 em;
-width:17em;
+height:25 rem;
+width:17rem;
 background-color:whitesmoke;
 margin:1%;
 }
@@ -77,9 +77,12 @@ padding-right: 0;
             <div class="card">
               <img src='/media/{{i.image}}' class="card-img-top" alt="...">
               <div class="card-body">
+              
+                <h5 class="card-title" id="namepr{{i.id}}" style="display:inline-block">{{i.product_name|upper}}</h5> 
                 {% if i.discount > 0 %}
-                <p id="discountpr{{i.id}}" class="badge badge-pill badge-danger" > {{i.discount}} %</p>{% endif %}  
-                <h5 class="card-title" id="namepr{{i.id}}">{{i.product_name}}</h5>
+                <p id="discountpr{{i.id}}" class="badge badge-pill badge-danger" style="display:inline-block"> {{i.discount}} %</p>
+                {% else %}
+                <p id="discountpr{{i.id}}"  style="display:inline-block">{% endif %}
                 <p class="card-text">{{i.desc|slice:"0:53"}}...</p>
                 {% if i.discount == 0 %}
                 <h6 style="display:inline-block">Rs. </h6><h6 id="pricepr{{i.id}}"  style="display:inline-block">{{i.price}}</h6><h6 style="display:inline-block">/-</h6><br>
@@ -107,10 +110,10 @@ padding-right: 0;
     </div>
     <!-- left and right controls for the slide -->
     <a class="carousel-control-prev" href="#demo{{forloop.counter}}" data-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
+      <span class="carousel-control-prev-icon" style="background-color:black"></span>
     </a>
-    <a class="carousel-control-next" href="#demo{{forloop.counter}}" data-slide="next">
-      <span class="carousel-control-next-icon"></span>
+    <a class="carousel-control-next" href="#demo{{forloop.counter}}" data-slide="next" >
+      <span class="carousel-control-next-icon"style="background-color:black"></span>
     </a>
   </div>
   {% endfor %}
@@ -149,11 +152,6 @@ padding-right: 0;
     updateCart(cart);
   })
 
-function vis(id,discount){
-  var idstr=id.toString()
-  if(discount>0){
-  document.getElementById("discount"+ idstr).style.visibility='hidden';}
-}
 
   $('#popcart').popover();
   updatePopover(cart);

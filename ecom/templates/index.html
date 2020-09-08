@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Welcome to My Awesome Cart</title>
+    <title>Shopify-R</title>
     <style>
       img{
         margin-left: 5vw;
@@ -22,7 +22,10 @@
 
 /* Make the image responsive */
 
-
+body{
+  height:100vh;
+  width:100vw;
+}
 /* Style the button and place it in the middle of the row/image */
 .row .btn {
   position: absolute;
@@ -45,18 +48,23 @@
   
 }
 .jumbotron{
-  background-color:rgb(179, 6, 64);
-  color: cornsilk;
-}
-      
+        background-image:url(https://th.bing.com/th/id/OIP.vXXVdLPgK7hPzIaZDjEKjwHaEK?w=322&h=181&c=7&o=5&dpr=1.25&pid=1.7);
+        color:cornsilk;
+      }
+      #neon {
+    color: cornsilk;
+    text-shadow: 0 0 15px cornsilk, 0 0 10px cornsilk,
+             0 0 20px cornsilk, 0 0 30px #A5F1FF,
+             0 0 40px cornsilk;
+             }
     </style>
   </head>
   <body>
     
    <div class="jumbotron">
-  <h1 class="display-4">Shopify-R</h1>
+  <h1 class="display-4" id="neon"><b>Shopify-R</b></h1><hr class="my-4">
   <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-  <hr class="my-4">
+  
   <p>It uses utility classes for typography and spacing to space content out within the larger row.</p>
   
   

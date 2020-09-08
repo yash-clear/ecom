@@ -7,18 +7,25 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-
-    <title>{% block title%} {% endblock %}</title>
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>{% block title%} Shopify-R{% endblock %}</title>
      <style>
        {% block css %} 
        {% endblock %}
   </style><style>body{
          background-color: white;
-       }</style>
+  }
+  .btn{
+    background-color:black ;
+  }
+ 
+       </style>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
-
+<div class="sticky-top">
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:rgb(13, 14, 14) ">
   <a class="navbar-brand" href="/shop">Shopaholics</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -56,7 +63,7 @@ sagittis lacus vel augue laoreet rutrum faucibus." style="color:darkgreen">
 </button>
   </div>
 </nav>
-
+</div>
   {% block body %} {% endblock %}
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

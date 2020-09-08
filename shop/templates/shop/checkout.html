@@ -9,8 +9,10 @@
             </ul>
         </div>
     </div>
+
     <div class="col my-4">
-        <h2>Step 2 - Enter Address & Other Details:</h2>
+        <h2 style="display: inline;">Step 2 - Enter Address & Other Details:</h2>
+      
         <form method="post" action="/shop/checkout/">{% csrf_token %}
             <input type="hidden" name="itemsJson" id="itemsJson">
             <div class="form-row">
@@ -101,15 +103,19 @@
             let name = cart[item][1];
             let qty = cart[item][0];
             let price = cart[item][2] * qty;
-            let discount=cart[item][3]*price/100
+            let discount=cart[item][3]
+            price=Number(price)
+            discount=discount.replace('%','')
+            discount=Number(discount)
             sum = sum + qty;
-            total += price-discount;
+            total += price-discount*price/100;
+            let newprice= price-discount*price/100;
             console.log("u r in biling");
             console.log(cart[item]);
             if (qty>0){
             mystr = `<li class="list-group-item d-flex justify-content-between align-items-center">
-                    ${name}
-                    <span class="badge badge-primary badge-pill">${qty}</span>
+                        ${name} <span style="margin-right:90px"; margin-left:"0px">Rs. ${newprice}</span>
+                        <span class="badge badge-primary badge-pill">${qty}</span>
                 </li>`
 
             $('#items').append(mystr);}
@@ -128,5 +134,8 @@
     function warn() {
         alert("COD is disabled due to pandemic situation")
     }
+
 </script>
+
+    
 {%endblock %}

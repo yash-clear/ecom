@@ -22,7 +22,8 @@ def index(request):
 
 def about(request):
     return render(request, 'shop/about.html')
-
+def founder(request):
+    return render(request,'shop/founder.html')
 
 def contact(request):
     if request.method=="POST":

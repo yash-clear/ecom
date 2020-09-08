@@ -1,9 +1,22 @@
 {% extends 'shop/basic.html' %}
+{% block css %}  
+      #neon {
+    color: cornsilk;
+    text-shadow: 0 0 5px #A5F1FF, 0 0 10px #A5F1FF,
+             0 0 20px #A5F1FF, 0 0 30px #A5F1FF,
+             0 0 40px #A5F1FF;
+      }
+      .jumbotron{
+        background-image:url(https://images.designtrends.com/wp-content/uploads/2015/11/30163403/Light-Black-Background.jpg);
+        color:cornsilk;
+      }
+{% endblock %}
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 {% block title%} About Us{% endblock %}
 {% block body %}
 
-
+{% load static %}
 
 
 <main role="main">
@@ -11,7 +24,7 @@
   <!-- Main jumbotron for a primary marketing message or call to action -->
   <div class="jumbotron">
     <div class="container">
-      <h1 class="display-3">Shopify-R</h1>
+      <h1 class="display-3" id="neon">Shopify-R</h1>
       <p>Shopify Inc. is a Canadian multinational e-commerce company headquartered in Ottawa,
            Ontario. It is also the name of its proprietary e-commerce platform for online stores and retail 
            point-of-sale systems. Shopify offers online retailers a suite of services "including payments, marketing, 
@@ -26,7 +39,7 @@
       <div class="col-md-4">
         <h2>Founders</h2>
         <p>Shopify was founded in 2004 by Tobias Lütke, Daniel Weinand, and Scott Lake after attempting to open Snowdevil, an online store for snowboarding equipment.</p>
-        <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+        <p><a class="btn btn-secondary" href="/shop/founders/" role="button">View details »</a></p>
       </div>
       <div class="col-md-4">
         <h2>App</h2>
@@ -41,9 +54,22 @@
     </div>
 
     <hr>
-
+    <div class="row">
+    <div class="col-md-4 content-align-center">
+      <i class="fa fa-magic fa-3x"></i>
+    <h4>Beautiful themes that are responsive and customizable</h4>
+    <p>Whether you sell online, on social media, in store, or out of the trunk of your car, Shopify has you covered. Start selling anywhere for just $29/month.</p></div>
+    <div class="col-md-4">
+      
+      <i class="fa fa-dollar fa-3x  "></i>
+     <h4>Pricing as low as $29/month</h4>
+      <p>No design skills needed. You have complete control over the look and feel of your website, from its layout, to content and colors.</p></div>
+      <div class="col-md-4">
+        <i class="fa fa-comments fa-3x"></i>
+        <h4>Trusted by over 1,000,000 businesses worldwide</h4>
+        <p>Shopify handles everything from marketing and payments, to secure checkout and shipping</p></div>
   </div> <!-- /container -->
-
+  </div>
 </main>
 
 
